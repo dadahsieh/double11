@@ -1,0 +1,45 @@
+@charset "UTF-8";
+@import "utilities/value";
+.eventheader {
+  top: 0px;
+  width: 100%;
+  display: block;
+  background-color: #fff;
+  z-index: 99;
+  .g-main {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .logo {
+      flex: 0 0 auto;
+      height: 35px;
+      width: 120px;
+      margin-bottom: 4px;
+      display: block;
+      cursor: pointer;
+      img {
+        width: 100%;
+      }
+    }
+    .share {
+      flex: 0 0 auto;
+      margin-left: auto;
+      font-size: 14px;
+      a {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+// *******************
+// footer
+// *******************
+.footer {
+  border-top: $primary 2px solid;
+  font-size: 12px;
+  color: #eee;
+  padding: 12px;
+  margin-top: 28px;
+}

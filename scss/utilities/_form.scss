@@ -1,0 +1,446 @@
+label {
+  display: block;
+  margin: 10px 0;
+  padding: 0 10px 0 0;
+  font-weight: normal;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+button,
+select {
+  text-transform: none;
+}
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #999;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #999;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #999;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #999;
+}
+// magic-input的選擇按鈕
+.mgc {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background-clip: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: -0.15px 0.6px 0 0;
+  vertical-align: text-bottom;
+  border-radius: 3px;
+  -webkit-transition: background-color 0.25s;
+  transition: background-color 0.25s;
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+}
+.mgc:checked:after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 7px;
+  border: 0 solid #333;
+  border-width: 0 0 2px 2px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 3px;
+  left: 3px;
+}
+.mgc:disabled {
+  opacity: 0.65;
+}
+.mgc:focus {
+  outline: none;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.075), 0 0 2px #38a7ff;
+}
+.mgc:checked {
+  background-color: #fff;
+  border-color: #d7d7d7;
+}
+.mgc:checked:after {
+  border-color: #414141;
+}
+.mgc-primary {
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+}
+.mgc-primary:checked {
+  background-color: #fff;
+  border-color: $primary;
+}
+.mgc-primary:checked:after {
+  border-color: $primary;
+}
+.mgc-success {
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+}
+.mgc-success:checked {
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+.mgc-success:checked:after {
+  border-color: #fff;
+}
+.mgc-info {
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+}
+.mgc-info:checked {
+  background-color: #5bc0de;
+  border-color: #5bc0de;
+}
+.mgc-info:checked:after {
+  border-color: #fff;
+}
+.mgc-warning {
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+}
+.mgc-warning:checked {
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+}
+.mgc-warning:checked:after {
+  border-color: #fff;
+}
+.mgc-danger {
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+}
+.mgc-danger:checked {
+  background-color: #cf3b3a;
+  border-color: #cf3b3a;
+}
+.mgc-danger:checked:after {
+  border-color: #fff;
+}
+.mgc-circle {
+  border-radius: 50%;
+}
+.mgc-mg {
+  width: 18px;
+  height: 18px;
+}
+.mgc-mg:checked:after {
+  top: 3px;
+  left: 3px;
+  height: 6px;
+  width: 12px;
+}
+.mgc-lg {
+  width: 24px;
+  height: 24px;
+}
+.mgc-lg:checked:after {
+  top: 4px;
+  left: 4px;
+  height: 8px;
+  width: 16px;
+}
+.mgr {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background-clip: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  vertical-align: text-bottom;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+}
+.mgr:disabled {
+  opacity: 0.65;
+}
+.mgr:before {
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+  -webkit-transition: width 0.25s, height 0.25s;
+  transition: width 0.25s, height 0.25s;
+}
+.mgr:checked:before {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  margin: 3px 0 0 3px;
+}
+.mgr:focus {
+  outline: none;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.075), 0 0 2px #38a7ff;
+}
+.mgr:checked {
+  border: 1px solid #555;
+}
+.mgr:checked:before {
+  background-color: #555;
+}
+.mgr-primary {
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+}
+.mgr-primary:checked {
+  border: 1px solid $primary;
+}
+.mgr-primary:checked:before {
+  background-color: $primary;
+}
+.mgr-success {
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+}
+.mgr-success:checked {
+  border: 1px solid #5cb85c;
+}
+.mgr-success:checked:before {
+  background-color: #5cb85c;
+}
+.mgr-info {
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+}
+.mgr-info:checked {
+  border: 1px solid #5bc0de;
+}
+.mgr-info:checked:before {
+  background-color: #5bc0de;
+}
+.mgr-warning {
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+}
+.mgr-warning:checked {
+  border: 1px solid #f0ad4e;
+}
+.mgr-warning:checked:before {
+  background-color: #f0ad4e;
+}
+.mgr-danger {
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+}
+.mgr-danger:checked {
+  border: 1px solid #cf3b3a;
+}
+.mgr-danger:checked:before {
+  background-color: #cf3b3a;
+}
+.mgr-sm {
+  width: 20px;
+  height: 20px;
+}
+.mgr-sm:checked:before {
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  margin: 2px 0 0 2px;
+}
+.mgr-lg {
+  width: 24px;
+  height: 24px;
+}
+.mgr-lg:checked:before {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  margin: 3px 0 0 3px;
+}
+.mgc-switch {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  width: 41px;
+  height: 24px;
+  border: 1px solid #dfdfdf;
+  outline: 0;
+  border-radius: 16px;
+  box-sizing: border-box;
+  background: #dfdfdf;
+}
+.mgc-switch:before,
+.mgc-switch:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.mgc-switch:before {
+  width: 39px;
+  height: 22px;
+  background-color: #fdfdfd;
+}
+.mgc-switch:after {
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+.mgc-switch:checked {
+  border-color: #04be02;
+  background-color: #04be02;
+}
+.mgc-switch:checked:before {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+.mgc-switch:checked:after {
+  -webkit-transform: translateX(17px);
+  transform: translateX(17px);
+}
+.mgc-sm.mgc-switch {
+  height: 20px;
+  width: 32px;
+}
+.mgc-sm.mgc-switch:before {
+  height: 18px;
+  width: 30px;
+}
+.mgc-sm.mgc-switch:after {
+  width: 18px;
+  height: 18px;
+}
+.mgc-sm.mgc-switch:checked:after {
+  top: 0;
+  left: 2px;
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+}
+.mgc-lg.mgc-switch {
+  height: 32px;
+  width: 52px;
+}
+.mgc-lg.mgc-switch:before {
+  height: 30px;
+  width: 50px;
+}
+.mgc-lg.mgc-switch:after {
+  width: 30px;
+  height: 30px;
+}
+.mgc-lg.mgc-switch:checked:after {
+  top: 0;
+  left: 2px;
+  -webkit-transform: translateX(18px);
+  transform: translateX(18px);
+}
+// 輸入框風格
+.form-style input[type="text"],
+.form-style input[type="date"],
+.form-style input[type="datetime"],
+.form-style input[type="email"],
+.form-style input[type="number"],
+.form-style input[type="search"],
+.form-style input[type="time"],
+.form-style input[type="url"],
+.form-style textarea,
+.form-style select {
+  outline: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 5px;
+  color: #555;
+  border-radius: 4px;
+  height: 44px;
+}
+.form-style textarea {
+  min-height: 120px;
+}
+.form-style input[type="text"]:focus,
+.form-style input[type="date"]:focus,
+.form-style input[type="datetime"]:focus,
+.form-style input[type="email"]:focus,
+.form-style input[type="number"]:focus,
+.form-style input[type="search"]:focus,
+.form-style input[type="time"]:focus,
+.form-style input[type="url"]:focus,
+.form-style textarea:focus,
+.form-style select:focus {
+  box-shadow: 0 0 5px $primary;
+
+  border: 1px solid $primary;
+}
+.form-style input[type="submit"],
+.form-style input[type="button"] {
+  width: 100%;
+}
+// 輸入框風格_錯誤訊息
+.form-style .error input[type="text"],
+.form-style .error input[type="date"],
+.form-style .error input[type="datetime"],
+.form-style .error input[type="email"],
+.form-style .error input[type="number"],
+.form-style .error input[type="search"],
+.form-style .error input[type="time"],
+.form-style .error input[type="url"],
+.form-style .error textarea,
+.form-style .error select {
+  box-shadow: 0 0 5px #f54747;
+  border: 1px solid #f54747;
+}
+.form-style .error p {
+  color: #f54747;
+  font-size: 13px;
+}
+// 輸入框風格_停用
+.form-style .disable input[type="text"],
+.form-style .disable input[type="date"],
+.form-style .disable input[type="datetime"],
+.form-style .disable input[type="email"],
+.form-style .disable input[type="number"],
+.form-style .disable input[type="search"],
+.form-style .disable input[type="time"],
+.form-style .disable input[type="url"],
+.form-style .disable textarea,
+.form-style .disable select {
+  background-color: #eee;
+  border: 1px solid #eee;
+}
+.form-style .icon-down {
+  appearance: none;
+
+  background: url(../images/arrdownIcon.svg) no-repeat right 0.5em center;
+  background-color: #fff;
+  background-size: 16px;
+}
+select::-ms-expand {
+  display: none;
+}

@@ -1,0 +1,234 @@
+// *******************
+// icon
+// *******************
+
+.arrIcon {
+  background: url(../images/arrIcon.svg) no-repeat;
+  background-size: cover;
+  display: inline-block;
+  &:hover {
+    background: url(../images/arrIcon_o.svg) no-repeat;
+  }
+}
+.closeIcon {
+  background: url(../images/closeIcon.svg) no-repeat;
+  background-size: cover;
+  display: inline-block;
+  &:hover {
+    background: url(../images/closeIcon_o.svg) no-repeat;
+  }
+}
+.hamIcon {
+  background: url(../images/hamIcon.svg) no-repeat;
+  background-size: cover;
+  display: inline-block;
+  &:hover {
+    background: url(../images/hamIcon_o.svg) no-repeat;
+  }
+}
+.plusIcon {
+  background: url(../images/plusIcon.svg) no-repeat;
+  background-size: cover;
+  display: inline-block;
+  &:hover {
+    background: url(../images/plusIcon_o.svg) no-repeat;
+  }
+}
+.minusIcon {
+  background: url(../images/minusIcon.svg) no-repeat;
+  background-size: cover;
+  display: inline-block;
+  &:hover {
+    background: url(../images/minusIcon_o.svg) no-repeat;
+  }
+}
+// *******************
+// 圖片比例-1:1
+// *******************
+.scale11 {
+  height: 0;
+  padding-bottom: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+}
+// *******************
+// 圖片比例-16:9
+// *******************
+.scale169 {
+  height: 0;
+  padding-bottom: 52.5%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+}
+// *******************
+// youtube影片RWD
+// *******************
+.video-container {
+  position: relative;
+
+  padding-bottom: 56.25%;
+
+  padding-top: 30px;
+
+  height: 0;
+
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  height: 100%;
+}
+// *******************
+// 文字兩行後點點點
+// *******************
+.ellipsisOne {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+// *******************
+// mod
+// *******************
+
+// *******************
+// mod-表格
+// *******************
+.table-bordered {
+  border: 1px solid #ddd;
+}
+.product-table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border-spacing: 0;
+  border-collapse: collapse;
+
+  th {
+    width: 19%;
+    text-align: left;
+  }
+  .graybg {
+    background-color: #f6f6f6;
+  }
+}
+.table-bordered > tbody > tr > td,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > td,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > thead > tr > th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+}
+// *******************
+// 外掛-lightbox-style
+// *******************
+.popup-cbg {
+  position: relative;
+  background: #fff;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+}
+.popup-cbg-L {
+  position: relative;
+  background: #fff;
+  width: auto;
+  max-width: 800px;
+  margin: 20px auto;
+}
+.popup-cbg-coupon {
+  position: relative;
+  background: #fff;
+  width: auto;
+  max-width: 500px;
+
+  margin: 16px auto;
+}
+.popup-rbg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: #fff;
+  width: auto;
+  min-width: 360px;
+}
+.popup-title {
+  padding: 0 12px;
+  height: 50px;
+  font-size: 20px;
+  line-height: 50px;
+  border-bottom: 1px solid $linecolor;
+}
+@media screen and (max-width: 767px) {
+  .popup-rbg {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+.mfp-close {
+  width: 50px;
+  height: 50px;
+  font-size: 32px;
+}
+/* lightbox-animate */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}

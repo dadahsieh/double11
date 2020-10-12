@@ -1,0 +1,192 @@
+// *******************
+// 專案基本網格設定
+// *******************
+.g-main {
+  width: 100%;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .g-main {
+    width: 800px;
+  }
+}
+
+// @media (min-width: 1200px) {
+//   .g-main {
+//     width: 1170px;
+//   }
+// }
+.g-main-L {
+  width: 100%;
+  max-width: 900px;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.g-main-M {
+  width: 100%;
+  max-width: 600px;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  margin-right: -12px;
+  margin-left: -12px;
+  position: relative;
+}
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+// *******************
+// 網格2-1
+// *******************
+.g-21 {
+  flex: 1 0 100%;
+  max-width: 100%;
+  padding: 6px;
+}
+
+@media (min-width: 450px) {
+  .g-21 {
+    flex: 1 0 50%;
+    max-width: 100%;
+    padding: 6px;
+  }
+}
+
+// *******************
+// 網格3-2-s1
+// *******************
+.g-32s1 {
+  flex: 1 0 100%;
+  max-width: 100%;
+  padding: 6px;
+}
+
+@media (min-width: 321px) {
+  .g-32s1 {
+    flex: 1 0 50%;
+    max-width: 100%;
+    padding: 6px;
+  }
+}
+
+@media (min-width: 992px) {
+  .g-32s1 {
+    flex: 1 0 30%;
+    max-width: 100%;
+    padding: 6px;
+  }
+}
+
+// *******************
+// 網格3-2-1
+// *******************
+.g-321 {
+  flex: 1 0 100%;
+  max-width: 100%;
+  padding: 12px;
+}
+
+@media (min-width: 768px) {
+  .g-321 {
+    flex: 1 0 50%;
+    max-width: 100%;
+    padding: 12px;
+  }
+}
+
+@media (min-width: 992px) {
+  .g-321 {
+    flex: 1 0 30%;
+    max-width: 100%;
+    padding: 12px;
+  }
+}
+
+// *******************
+// 網格4-2
+// *******************
+.g-42 {
+  flex: 1 0 50%;
+  max-width: 100%;
+  padding: 12px;
+}
+
+@media (min-width: 768px) {
+  .g-42 {
+    flex: 1 0 25%;
+    max-width: 100%;
+    padding: 12px;
+  }
+}
+
+// *******************
+// display=flex
+// *******************
+.f-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.f-nowrap {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+// *******************
+// 對齊方式
+// *******************
+.f-align-cc {
+  justify-content: center;
+  align-items: center;
+}
+
+.f-jc-spacebetween {
+  justify-content: space-between;
+}
+
+.f-jc-center {
+  justify-content: center;
+}
+
+.f-ai-center {
+  align-items: center;
+}
+
+// *******************
+// 基本網格
+// *******************
+.g-1 {
+  flex: 1;
+}
+
+.g-auto {
+  flex: 0 0 auto;
+}
+
+.g-half {
+  flex: 0 0 50%;
+}
+
+.g-70 {
+  flex: 0 0 70%;
+}
+
+.g-100 {
+  flex: 0 0 100%;
+}

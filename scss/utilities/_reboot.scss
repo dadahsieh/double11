@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $bg-body;
+  color: $textcolor;
+  font-family: $fonts;
+  font-size: $fontBody;
+  font-weight: normal;
+  line-height: 1.5;
+  position: relative;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: $deeptone;
+  margin: 0px;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: $primary;
+}
+
+a:focus {
+  outline: none !important;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+em {
+  font-style: normal;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+  color: $deeptone;
+}
+
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.circle_box {
+  border-radius: 999em;
+}
+
+.clear {
+  clear: both;
+}
+
+.imgrwd {
+  width: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+/* ------------------------------------ */
