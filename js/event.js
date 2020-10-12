@@ -67,7 +67,7 @@ $(document).ready(function () {
       path: 'data.json'
     });
     $(".lightbox").fadeIn();
-    $(".eyecatch").fadeIn().delay(1800).fadeOut();
+    $(".eyecatch").fadeIn().delay(1700).fadeOut();
     $(".awards").delay(2500).fadeIn();
   });
   $(".closeBtn").click(function () {

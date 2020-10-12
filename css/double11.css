@@ -1163,8 +1163,8 @@ li {
   background-image: url(../images/bg.jpg);
   background-repeat: no-repeat;
   background-position: 50% 0;
-  -o-background-size: cover;
-     background-size: cover;
+  -o-background-size: 100%;
+     background-size: 100%;
 }
 
 .kv {
@@ -1839,6 +1839,55 @@ li {
   99.9% {
     margin-top: 30%;
     margin-left: 80%;
+  }
+}
+
+.saleTitle {
+  position: relative;
+  width: 100%;
+  max-width: 468px;
+  max-height: 155px;
+  margin: 0 auto;
+  -webkit-transform: translate(0, 50%);
+     -moz-transform: translate(0, 50%);
+      -ms-transform: translate(0, 50%);
+       -o-transform: translate(0, 50%);
+          transform: translate(0, 50%);
+  padding: 0 24px;
+}
+
+.saleTitle img {
+  width: 100%;
+  height: 100%;
+}
+
+.sale {
+  width: 100%;
+}
+
+.sale .content {
+  background: #fd322b;
+  box-shadow: 0px 0px 0px 5px #fd322b;
+  border: solid 4px #b00b06;
+  padding: 0.2em 0.5em;
+  border-radius: 8px;
+  padding-top: 50px;
+}
+
+.gTitle {
+  max-width: 180px;
+  margin: 20px auto 20px;
+}
+
+.gTitle img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 640px) {
+  .gTitle {
+    max-width: 300px;
+    margin: 20px auto 20px;
   }
 }
 
