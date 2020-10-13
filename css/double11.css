@@ -1490,7 +1490,7 @@ li {
   background: url(../images/closeBtn.png) no-repeat;
   -o-background-size: cover;
      background-size: cover;
-  right: -8px;
+  right: 16px;
   top: -8px;
   cursor: pointer;
 }
