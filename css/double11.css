@@ -1891,6 +1891,31 @@ li {
   }
 }
 
+.giftTitle {
+  position: relative;
+  width: 100%;
+  max-width: 468px;
+  max-height: 155px;
+  margin: 0 auto;
+  padding: 0 24px;
+  margin: 40px auto 20px;
+}
+
+.giftTitle img {
+  width: 100%;
+  height: 100%;
+}
+
+.directions {
+  color: #fff;
+  list-style-position: inside;
+  padding-left: 20px;
+}
+
+.directions li {
+  list-style-type: decimal;
+}
+
 .arrIcon {
   background: url(../images/arrIcon.svg) no-repeat;
   -o-background-size: cover;
