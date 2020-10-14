@@ -20,7 +20,7 @@
   height: 0;
   padding-bottom: 100%;
   background: url(../images/game.png) 0 0 no-repeat;
-  margin-top: 50px;
+  margin-top: 54px;
   animation-name: FpsRwd;
   /*----播放時間----*/
   animation-duration: 1s;
@@ -34,6 +34,12 @@
   background-size: 200% 100%;
   position: relative;
 
+  p {
+    text-align: center;
+    color: #fff;
+    padding-top: 8%;
+  }
+
   .gameTitle {
     width: 100%;
     max-width: 468px;
@@ -43,7 +49,7 @@
     background: url(../images/title1.png)no-repeat;
     background-size: contain;
     background-position: center;
-    top: -12%;
+    top: -15%;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 2;
@@ -53,12 +59,12 @@
   ul {
     display: flex;
     flex-wrap: wrap;
-    padding: 5%;
+    padding: 0 5%;
   }
 
   li {
     height: 0;
-    padding-bottom: 33%;
+    padding-bottom: 31%;
     flex: 0 0 33%;
     position: relative;
     cursor: pointer;
@@ -92,6 +98,51 @@
   }
 }
 
+@media (min-width: 540px) and (max-width: 640px) {
+  .gameStart {
+    p {
+      text-align: center;
+      color: #fff;
+      padding-top: 7%;
+      font-size: 28px;
+    }
+
+    .gameTitle {
+      padding-bottom: 18%;
+      top: -12%;
+    }
+  }
+}
+
+@media (min-width: 640px) {
+  .gameStart {
+    p {
+      text-align: center;
+      color: #fff;
+      padding-top: 8%;
+      font-size: 28px;
+    }
+
+    .gameTitle {
+      padding-bottom: 18%;
+      top: -10%;
+    }
+
+
+  }
+
+  #abgne_marquee ul li a {
+    display: block;
+    overflow: hidden;
+    /* 超出範圍的部份要隱藏 */
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    font-size: 28px;
+    color: #fff;
+  }
+}
+
 @keyframes FpsRwd {
   0% {
     background-position: left top;
@@ -117,7 +168,7 @@
     width: 100%;
     max-width: 468px;
     height: 0;
-    padding-bottom: 20%;
+    padding-bottom: 25%;
     position: absolute;
     background: url(../images/title2.png)no-repeat;
     background-size: contain;
@@ -352,10 +403,21 @@
 
       .form {
         text-align: left;
+        display: flex;
+        margin-bottom: 4px;
 
         p {
+          display: flex;
           color: $secondary;
           font-size: 14px;
+          flex: 0 0 50px;
+          align-items: center;
+        }
+
+        .form-style {
+          flex: 1;
+          padding: 4px;
+
         }
       }
     }

@@ -18,7 +18,6 @@
 </head>
 
 <body class="bigbg">
-
   <header class="eventheader">
     <div class="g-main">
       <a class="logo" href="https://www.bwlohas.com/zh-tw/store" target="_blank">
@@ -50,6 +49,7 @@
       <!--遊戲開始-->
       <div class="gameStart">
         <div class="gameTitle"></div>
+        <p>你今天有2次抽獎機會</p>
         <ul>
           <li>
             <div class="finger"></div>
@@ -104,10 +104,10 @@
     </div>
     <!--過場動畫-->
     <div class="eyecatch" id="bm"></div>
-    <!--lightbox開始-->
+    <!--中獎結果lightbox開始-->
     <div class="lightbox">
       <div class="content">
-        <!--中獎結果-實體獎品-->
+        <!--中獎結果-實體獎品1-1-->
         <div class="awards win animated bounceInDown">
           <div class="pyro">
             <div class="before"></div>
@@ -117,25 +117,80 @@
           <h2>獲得CB12漱口水半年份</h2>
           <div class="gift"><img src="images/gift_cb12.png" alt=""></div>
           <h3>請填寫收件資料</h3>
+
           <div class="form">
-            <p>收件人姓名</p>
+            <p>姓名</p>
             <div class="form-style">
               <input type="email" placeholder="">
             </div>
-            <p>收件人電話</p>
+          </div>
+
+          <div class="form">
+            <p>生日</p>
+            <div class="form-style">
+              <select class="icon-down">
+                <option selected="">1980</option>
+                <option>1981</option>
+                <option>1982</option>
+              </select></div>
+            <div class="form-style">
+              <select class="icon-down">
+                <option selected="">1月</option>
+                <option>2月</option>
+                <option>3月
+                </option>
+              </select></div>
+            <div class="form-style">
+              <select class="icon-down">
+                <option selected="">1日
+                </option>
+                <option>2日</option>
+                <option>3日</option>
+              </select>
+            </div>
+          </div>
+          <div class="form">
+            <p>電話</p>
             <div class="form-style">
               <input type="email" placeholder="">
             </div>
-            <p>收件人地址</p>
+          </div>
+          <div class="form">
+            <p>地址</p>
             <div class="form-style">
               <input type="email" placeholder="">
             </div>
 
           </div>
+          <div class="form">
+            <p>性別</p>
+            <div class="form-style">
+              <input type="radio" name="sex" style="WIDTH: 20px; HEIGHT: 20px"> 男
+            </div>
+            <div class="form-style">
+              <input type="radio" name="sex" style="WIDTH: 20px; HEIGHT: 20px"> 女
+            </div>
+            <div class="form-style"></div>
+          </div>
           <div class="primary_btn">
             送出
           </div>
-          <h3>填寫完成</h3>
+
+        </div>
+        <!--中獎結果-實體獎品1-2還有抽獎機會-->
+        <div class="awards win animated bounceInDown">
+          <div class="title"></div>
+          <h3>獎項已經放入您的購物車內</h3>
+          <p>
+            <em>你今日還有1次抽獎機會</em></p>
+          <div class="primary_btn">
+            再戳一次
+          </div>
+        </div>
+        <!--中獎結果-實體獎品1-3抽獎機會用光時-->
+        <div class="awards win animated bounceInDown">
+          <div class="title"></div>
+          <h3>獎品已經放入您的購物車內</h3>
           <p>還想再試試手氣？<br>
             你可以使用會員點數5點再戳一次<br>
             <em>你的會員點數還有：100點</em></p>
@@ -143,7 +198,7 @@
             再戳一次
           </div>
           <div class="second_btn">
-            去藍鯨商城逛逛
+            去購物車查看獎品
           </div>
         </div>
         <!--中獎結果-虛擬獎品-->
@@ -205,11 +260,13 @@
       <div class="saleTitle"><img src="images/saletitle.png" alt="秒殺商品"></div>
       <div class="sale">
         <div class="content">eee</div>
+
       </div>
     </div>
     <!--贈品獎項-->
     <div class="g-main">
       <div class="giftTitle"><img src="images/title3.png" alt="贈品獎項"></div>
+      <img src="images/giftItem.png" alt="贈品獎項" class="imgrwd">
     </div>
     <!--活動辦法-->
     <div class="g-main">
