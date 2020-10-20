@@ -11,7 +11,13 @@
 
 .kv {
   width: 100%;
-  height: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  img {
+    width: 100%;
+
+  }
 }
 
 .gameStart {
@@ -826,10 +832,29 @@
 .directions {
   color: #fff;
   list-style-position: inside;
-  padding-left: 20px;
+  margin-bottom: 20px;
+
+  h3 {
+    color: #fff;
+    font-size: 20px;
+  }
 
   li {
+    margin-left: 24px;
     list-style-type: decimal;
 
+  }
+}
+
+.iphone {
+  background: url(../images/iphonebg.png)no-repeat 50% 0;
+  text-align: center;
+  margin-top: 40px;
+  padding-left: 12px;
+  padding-right: 12px;
+
+  img {
+    width: 100%;
+    max-width: 800px;
   }
 }
