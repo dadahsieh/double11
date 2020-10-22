@@ -1,0 +1,869 @@
+// *******************
+// 專案內容css
+// *******************
+
+.bigbg {
+  background-image: url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: 100%;
+}
+
+.kv {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  img {
+    width: 100%;
+
+  }
+}
+
+.gameStart {
+  width: 100%;
+  /*----物件需要顯示的寬高 ----*/
+  height: 0;
+  padding-bottom: 100%;
+  background: url(../images/game.png) 0 0 no-repeat;
+  margin-top: 54px;
+  animation-name: FpsRwd;
+  /*----播放時間----*/
+  animation-duration: 1s;
+  /*----影格數----*/
+  animation-timing-function: steps(2, end);
+  /*----播放次數 ----*/
+  animation-iteration-count: infinite;
+  /*----停在最後一格 ----*/
+  animation-fill-mode: forwards;
+  /*----background-size 的寬度值設為 N影格 ×100% ----*/
+  background-size: 200% 100%;
+  position: relative;
+
+  p {
+    text-align: center;
+    color: #fff;
+    padding-top: 8%;
+  }
+
+  .gameTitle {
+    width: 100%;
+    max-width: 468px;
+    height: 0;
+    padding-bottom: 20%;
+    position: absolute;
+    background: url(../images/title1.png)no-repeat;
+    background-size: contain;
+    background-position: center;
+    top: -15%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 2;
+
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5%;
+  }
+
+  li {
+    height: 0;
+    padding-bottom: 31%;
+    flex: 0 0 33%;
+    position: relative;
+    cursor: pointer;
+
+    .finger {
+      position: absolute;
+      top: -5%;
+      right: -20%;
+      width: 60%;
+      height: 0;
+      padding-bottom: 60%;
+      background: url(../images/finger.png)no-repeat;
+      background-size: cover;
+      transition: all 0.15s ease-out 0.15s;
+      opacity: 0;
+    }
+
+    &:hover {
+      .finger {
+        position: absolute;
+        top: 20%;
+        right: 20%;
+        width: 60%;
+        height: 0;
+        padding-bottom: 60%;
+        background: url(../images/finger.png)no-repeat;
+        background-size: cover;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media (min-width: 540px) and (max-width: 640px) {
+  .gameStart {
+    p {
+      text-align: center;
+      color: #fff;
+      padding-top: 7%;
+      font-size: 28px;
+    }
+
+    .gameTitle {
+      padding-bottom: 18%;
+      top: -12%;
+    }
+  }
+}
+
+@media (min-width: 640px) {
+  .gameStart {
+    p {
+      text-align: center;
+      color: #fff;
+      padding-top: 8%;
+      font-size: 28px;
+    }
+
+    .gameTitle {
+      padding-bottom: 18%;
+      top: -10%;
+    }
+
+
+  }
+
+  #abgne_marquee ul li a {
+    display: block;
+    overflow: hidden;
+    /* 超出範圍的部份要隱藏 */
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    font-size: 28px;
+    color: #fff;
+  }
+}
+
+@keyframes FpsRwd {
+  0% {
+    background-position: left top;
+  }
+
+  100% {
+    /*----background-position 的結束位置為 100% + (100 ÷(N - 1))% ----*/
+    background-position: 200% top;
+  }
+}
+
+.gameClose {
+  width: 100%;
+  height: 0;
+  padding-bottom: 76.45%;
+  background: url(../images/gameclose.png) 0 0 no-repeat;
+  background-size: cover;
+  margin-top: 50px;
+  text-align: center;
+
+
+  .gameTitle {
+    width: 100%;
+    max-width: 468px;
+    height: 0;
+    padding-bottom: 25%;
+    position: absolute;
+    background: url(../images/title2.png)no-repeat;
+    background-size: contain;
+    background-position: center;
+    top: -12%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 2;
+
+  }
+
+  p {
+    padding-top: 15%;
+    color: $secondary;
+    font-size: 16px;
+
+    em {
+      font-size: 20px;
+      line-height: 36px;
+    }
+  }
+}
+
+@media (min-width: 640px) {
+  .gameClose {
+
+    p {
+      padding-top: 15%;
+      color: $secondary;
+      font-size: 20px;
+
+      em {
+        font-size: 24px;
+        line-height: 45px;
+      }
+    }
+
+  }
+
+  #abgne_marquee ul li a {
+    display: block;
+    overflow: hidden;
+    /* 超出範圍的部份要隱藏 */
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    font-size: 28px;
+    color: #fff;
+  }
+}
+
+.message {
+  background: url(../images/messageBg.png)no-repeat;
+  background-size: cover;
+  height: 0;
+  padding-bottom: 15%;
+
+  .led {
+    padding-top: 5%;
+  }
+
+}
+
+#abgne_marquee {
+  position: relative;
+  overflow: hidden;
+  /* 超出範圍的部份要隱藏 */
+  width: 76%;
+  height: 30px;
+  margin: 0px auto;
+}
+
+#abgne_marquee ul,
+#abgne_marquee li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#abgne_marquee ul {
+  position: absolute;
+  bottom: 0;
+}
+
+
+#abgne_marquee ul li a {
+  display: block;
+  overflow: hidden;
+  /* 超出範圍的部份要隱藏 */
+  height: 30px;
+  line-height: 30px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #fff;
+
+}
+
+@media (min-width: 640px) {
+  .message {
+
+    .led {
+      padding-top: 8%;
+    }
+
+  }
+
+  #abgne_marquee ul li a {
+    display: block;
+    overflow: hidden;
+    /* 超出範圍的部份要隱藏 */
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    font-size: 28px;
+    color: #fff;
+  }
+}
+
+.eyecatch {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.alert {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 999;
+
+
+  .content {
+    max-width: 450px;
+    margin: 30px auto 0;
+    padding: 12px;
+    position: relative;
+
+    .message {
+      padding: 12px;
+      background-image: linear-gradient(#fdecce, #f9d9a8);
+      border-radius: 10px;
+      text-align: center;
+      height: auto;
+    }
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  background: url(../images/closeBtn.png)no-repeat;
+  background-size: cover;
+  right: 16px;
+  top: -8px;
+  cursor: pointer;
+}
+
+.lightbox {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 999;
+
+  .content {
+    max-width: 600px;
+    margin: 30px auto 0;
+    padding: 12px;
+
+    .awards {
+      width: 100%;
+      background-image: url(../images/light.png), linear-gradient(#fdecce, #f9d9a8);
+      background-repeat: no-repeat, no-repeat;
+      background-position: 50% 0, 50% 0;
+      background-size: 120%, contain;
+      border-radius: 10px;
+      position: relative;
+      padding-top: 16%;
+      padding-left: 12px;
+      padding-right: 12px;
+      text-align: center;
+
+      .gift {
+        width: 50%;
+        background: url(../images/frame.png)no-repeat;
+        background-size: contain;
+        padding: 4%;
+        margin: 0 auto;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      h3 {
+        position: relative;
+        display: inline-block;
+        padding: 0 50px;
+        color: $primary;
+      }
+
+      h3:before,
+      h3:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        display: inline-block;
+        width: 40px;
+        height: 1px;
+        background-color: $primary;
+      }
+
+      h3:before {
+        left: 0;
+      }
+
+      h3:after {
+        right: 0;
+      }
+
+      .form {
+        text-align: left;
+        display: flex;
+        margin-bottom: 4px;
+
+        p {
+          display: flex;
+          color: $secondary;
+          font-size: 14px;
+          flex: 0 0 50px;
+          align-items: center;
+        }
+
+        .form-style {
+          flex: 1;
+          padding: 4px;
+
+        }
+      }
+    }
+
+    .win {
+      .title {
+        background: url(../images/WinTitle.png)no-repeat;
+        width: 80%;
+        height: 0;
+        padding-bottom: 30%;
+        background-size: cover;
+        margin: 0 auto;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+      }
+    }
+
+    .lose {
+      background-image: linear-gradient(#fdecce, #f9d9a8);
+
+      .title {
+        background: url(../images/loseTitle.png)no-repeat;
+        width: 80%;
+        height: 0;
+        padding-bottom: 30%;
+        background-size: cover;
+        margin: 0 auto;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+      }
+    }
+
+    p {
+      color: $secondary;
+      font-size: 16px;
+
+      em {
+        font-size: 20px;
+        line-height: 36px;
+      }
+    }
+  }
+
+}
+
+@media (min-width: 640px) {
+  .lightbox {
+
+    .content {
+      margin: 50px auto 0;
+    }
+
+  }
+}
+
+// *******************
+// 煙火css
+// *******************
+.pyro>.before,
+.pyro>.after {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  box-shadow: 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff;
+  -moz-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+  -webkit-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+  -o-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+  -ms-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+  animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+}
+
+.pyro>.after {
+  -moz-animation-delay: 1.25s, 1.25s, 1.25s;
+  -webkit-animation-delay: 1.25s, 1.25s, 1.25s;
+  -o-animation-delay: 1.25s, 1.25s, 1.25s;
+  -ms-animation-delay: 1.25s, 1.25s, 1.25s;
+  animation-delay: 1.25s, 1.25s, 1.25s;
+  -moz-animation-duration: 1.25s, 1.25s, 6.25s;
+  -webkit-animation-duration: 1.25s, 1.25s, 6.25s;
+  -o-animation-duration: 1.25s, 1.25s, 6.25s;
+  -ms-animation-duration: 1.25s, 1.25s, 6.25s;
+  animation-duration: 1.25s, 1.25s, 6.25s;
+}
+
+@-webkit-keyframes bang {
+  to {
+    box-shadow: 96px -176.6666666667px #48ff00, -11px -396.6666666667px #0004ff, 208px -194.6666666667px #b3ff00, -97px -304.6666666667px #ff00d0, 17px 78.3333333333px #bbff00, -15px -167.6666666667px #15ff00, -40px -371.6666666667px #dd00ff, 200px -387.6666666667px #00e6ff, 13px -264.6666666667px #ff9100, 238px 24.3333333333px #aaff00, -51px 66.3333333333px #4dff00, 152px -225.6666666667px #ff7b00, -103px -371.6666666667px #0095ff, 183px -361.6666666667px #ff0900, -247px 48.3333333333px #1100ff, 90px 38.3333333333px #91ff00, -40px -94.6666666667px #2fff00, -14px -13.6666666667px #6a00ff, -213px -380.6666666667px #ff00ae, 106px -356.6666666667px #4800ff, -21px -108.6666666667px #ee00ff, -76px -218.6666666667px #00fffb, 216px -390.6666666667px #00ffd0, -234px -187.6666666667px #0099ff, -208px -317.6666666667px #ffee00, -187px -215.6666666667px #ff0015, -207px -374.6666666667px #ff004d, 62px -187.6666666667px #0022ff, 22px -298.6666666667px #ff0099, 157px -90.6666666667px #00ff3c, 32px -317.6666666667px #15ff00, 175px -152.6666666667px #ff7300, -232px -29.6666666667px #51ff00, 203px 22.3333333333px #ff7700, 116px 67.3333333333px #ffd500, 143px -393.6666666667px #ffaa00, 70px 79.3333333333px #d5ff00, -2px -203.6666666667px #ff1500, 188px -329.6666666667px #00c8ff, -42px -338.6666666667px #00fff7, 52px -115.6666666667px #2b00ff, 102px -28.6666666667px #ff9900, -6px -121.6666666667px #00ffa2, 142px -189.6666666667px #ffbb00, 219px -170.6666666667px #ff0091, 164px -376.6666666667px #bbff00, -81px -128.6666666667px #005eff, 29px 28.3333333333px #00ffe1, 26px -129.6666666667px #00ff26, -4px -265.6666666667px #ff7300, -180px -342.6666666667px #9500ff;
+  }
+}
+
+@-moz-keyframes bang {
+  to {
+    box-shadow: 96px -176.6666666667px #48ff00, -11px -396.6666666667px #0004ff, 208px -194.6666666667px #b3ff00, -97px -304.6666666667px #ff00d0, 17px 78.3333333333px #bbff00, -15px -167.6666666667px #15ff00, -40px -371.6666666667px #dd00ff, 200px -387.6666666667px #00e6ff, 13px -264.6666666667px #ff9100, 238px 24.3333333333px #aaff00, -51px 66.3333333333px #4dff00, 152px -225.6666666667px #ff7b00, -103px -371.6666666667px #0095ff, 183px -361.6666666667px #ff0900, -247px 48.3333333333px #1100ff, 90px 38.3333333333px #91ff00, -40px -94.6666666667px #2fff00, -14px -13.6666666667px #6a00ff, -213px -380.6666666667px #ff00ae, 106px -356.6666666667px #4800ff, -21px -108.6666666667px #ee00ff, -76px -218.6666666667px #00fffb, 216px -390.6666666667px #00ffd0, -234px -187.6666666667px #0099ff, -208px -317.6666666667px #ffee00, -187px -215.6666666667px #ff0015, -207px -374.6666666667px #ff004d, 62px -187.6666666667px #0022ff, 22px -298.6666666667px #ff0099, 157px -90.6666666667px #00ff3c, 32px -317.6666666667px #15ff00, 175px -152.6666666667px #ff7300, -232px -29.6666666667px #51ff00, 203px 22.3333333333px #ff7700, 116px 67.3333333333px #ffd500, 143px -393.6666666667px #ffaa00, 70px 79.3333333333px #d5ff00, -2px -203.6666666667px #ff1500, 188px -329.6666666667px #00c8ff, -42px -338.6666666667px #00fff7, 52px -115.6666666667px #2b00ff, 102px -28.6666666667px #ff9900, -6px -121.6666666667px #00ffa2, 142px -189.6666666667px #ffbb00, 219px -170.6666666667px #ff0091, 164px -376.6666666667px #bbff00, -81px -128.6666666667px #005eff, 29px 28.3333333333px #00ffe1, 26px -129.6666666667px #00ff26, -4px -265.6666666667px #ff7300, -180px -342.6666666667px #9500ff;
+  }
+}
+
+@-o-keyframes bang {
+  to {
+    box-shadow: 96px -176.6666666667px #48ff00, -11px -396.6666666667px #0004ff, 208px -194.6666666667px #b3ff00, -97px -304.6666666667px #ff00d0, 17px 78.3333333333px #bbff00, -15px -167.6666666667px #15ff00, -40px -371.6666666667px #dd00ff, 200px -387.6666666667px #00e6ff, 13px -264.6666666667px #ff9100, 238px 24.3333333333px #aaff00, -51px 66.3333333333px #4dff00, 152px -225.6666666667px #ff7b00, -103px -371.6666666667px #0095ff, 183px -361.6666666667px #ff0900, -247px 48.3333333333px #1100ff, 90px 38.3333333333px #91ff00, -40px -94.6666666667px #2fff00, -14px -13.6666666667px #6a00ff, -213px -380.6666666667px #ff00ae, 106px -356.6666666667px #4800ff, -21px -108.6666666667px #ee00ff, -76px -218.6666666667px #00fffb, 216px -390.6666666667px #00ffd0, -234px -187.6666666667px #0099ff, -208px -317.6666666667px #ffee00, -187px -215.6666666667px #ff0015, -207px -374.6666666667px #ff004d, 62px -187.6666666667px #0022ff, 22px -298.6666666667px #ff0099, 157px -90.6666666667px #00ff3c, 32px -317.6666666667px #15ff00, 175px -152.6666666667px #ff7300, -232px -29.6666666667px #51ff00, 203px 22.3333333333px #ff7700, 116px 67.3333333333px #ffd500, 143px -393.6666666667px #ffaa00, 70px 79.3333333333px #d5ff00, -2px -203.6666666667px #ff1500, 188px -329.6666666667px #00c8ff, -42px -338.6666666667px #00fff7, 52px -115.6666666667px #2b00ff, 102px -28.6666666667px #ff9900, -6px -121.6666666667px #00ffa2, 142px -189.6666666667px #ffbb00, 219px -170.6666666667px #ff0091, 164px -376.6666666667px #bbff00, -81px -128.6666666667px #005eff, 29px 28.3333333333px #00ffe1, 26px -129.6666666667px #00ff26, -4px -265.6666666667px #ff7300, -180px -342.6666666667px #9500ff;
+  }
+}
+
+@-ms-keyframes bang {
+  to {
+    box-shadow: 96px -176.6666666667px #48ff00, -11px -396.6666666667px #0004ff, 208px -194.6666666667px #b3ff00, -97px -304.6666666667px #ff00d0, 17px 78.3333333333px #bbff00, -15px -167.6666666667px #15ff00, -40px -371.6666666667px #dd00ff, 200px -387.6666666667px #00e6ff, 13px -264.6666666667px #ff9100, 238px 24.3333333333px #aaff00, -51px 66.3333333333px #4dff00, 152px -225.6666666667px #ff7b00, -103px -371.6666666667px #0095ff, 183px -361.6666666667px #ff0900, -247px 48.3333333333px #1100ff, 90px 38.3333333333px #91ff00, -40px -94.6666666667px #2fff00, -14px -13.6666666667px #6a00ff, -213px -380.6666666667px #ff00ae, 106px -356.6666666667px #4800ff, -21px -108.6666666667px #ee00ff, -76px -218.6666666667px #00fffb, 216px -390.6666666667px #00ffd0, -234px -187.6666666667px #0099ff, -208px -317.6666666667px #ffee00, -187px -215.6666666667px #ff0015, -207px -374.6666666667px #ff004d, 62px -187.6666666667px #0022ff, 22px -298.6666666667px #ff0099, 157px -90.6666666667px #00ff3c, 32px -317.6666666667px #15ff00, 175px -152.6666666667px #ff7300, -232px -29.6666666667px #51ff00, 203px 22.3333333333px #ff7700, 116px 67.3333333333px #ffd500, 143px -393.6666666667px #ffaa00, 70px 79.3333333333px #d5ff00, -2px -203.6666666667px #ff1500, 188px -329.6666666667px #00c8ff, -42px -338.6666666667px #00fff7, 52px -115.6666666667px #2b00ff, 102px -28.6666666667px #ff9900, -6px -121.6666666667px #00ffa2, 142px -189.6666666667px #ffbb00, 219px -170.6666666667px #ff0091, 164px -376.6666666667px #bbff00, -81px -128.6666666667px #005eff, 29px 28.3333333333px #00ffe1, 26px -129.6666666667px #00ff26, -4px -265.6666666667px #ff7300, -180px -342.6666666667px #9500ff;
+  }
+}
+
+@keyframes bang {
+  to {
+    box-shadow: 96px -176.6666666667px #48ff00, -11px -396.6666666667px #0004ff, 208px -194.6666666667px #b3ff00, -97px -304.6666666667px #ff00d0, 17px 78.3333333333px #bbff00, -15px -167.6666666667px #15ff00, -40px -371.6666666667px #dd00ff, 200px -387.6666666667px #00e6ff, 13px -264.6666666667px #ff9100, 238px 24.3333333333px #aaff00, -51px 66.3333333333px #4dff00, 152px -225.6666666667px #ff7b00, -103px -371.6666666667px #0095ff, 183px -361.6666666667px #ff0900, -247px 48.3333333333px #1100ff, 90px 38.3333333333px #91ff00, -40px -94.6666666667px #2fff00, -14px -13.6666666667px #6a00ff, -213px -380.6666666667px #ff00ae, 106px -356.6666666667px #4800ff, -21px -108.6666666667px #ee00ff, -76px -218.6666666667px #00fffb, 216px -390.6666666667px #00ffd0, -234px -187.6666666667px #0099ff, -208px -317.6666666667px #ffee00, -187px -215.6666666667px #ff0015, -207px -374.6666666667px #ff004d, 62px -187.6666666667px #0022ff, 22px -298.6666666667px #ff0099, 157px -90.6666666667px #00ff3c, 32px -317.6666666667px #15ff00, 175px -152.6666666667px #ff7300, -232px -29.6666666667px #51ff00, 203px 22.3333333333px #ff7700, 116px 67.3333333333px #ffd500, 143px -393.6666666667px #ffaa00, 70px 79.3333333333px #d5ff00, -2px -203.6666666667px #ff1500, 188px -329.6666666667px #00c8ff, -42px -338.6666666667px #00fff7, 52px -115.6666666667px #2b00ff, 102px -28.6666666667px #ff9900, -6px -121.6666666667px #00ffa2, 142px -189.6666666667px #ffbb00, 219px -170.6666666667px #ff0091, 164px -376.6666666667px #bbff00, -81px -128.6666666667px #005eff, 29px 28.3333333333px #00ffe1, 26px -129.6666666667px #00ff26, -4px -265.6666666667px #ff7300, -180px -342.6666666667px #9500ff;
+  }
+}
+
+@-webkit-keyframes gravity {
+  to {
+    transform: translateY(200px);
+    -moz-transform: translateY(200px);
+    -webkit-transform: translateY(200px);
+    -o-transform: translateY(200px);
+    -ms-transform: translateY(200px);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes gravity {
+  to {
+    transform: translateY(200px);
+    -moz-transform: translateY(200px);
+    -webkit-transform: translateY(200px);
+    -o-transform: translateY(200px);
+    -ms-transform: translateY(200px);
+    opacity: 0;
+  }
+}
+
+@-o-keyframes gravity {
+  to {
+    transform: translateY(200px);
+    -moz-transform: translateY(200px);
+    -webkit-transform: translateY(200px);
+    -o-transform: translateY(200px);
+    -ms-transform: translateY(200px);
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes gravity {
+  to {
+    transform: translateY(200px);
+    -moz-transform: translateY(200px);
+    -webkit-transform: translateY(200px);
+    -o-transform: translateY(200px);
+    -ms-transform: translateY(200px);
+    opacity: 0;
+  }
+}
+
+@keyframes gravity {
+  to {
+    transform: translateY(200px);
+    -moz-transform: translateY(200px);
+    -webkit-transform: translateY(200px);
+    -o-transform: translateY(200px);
+    -ms-transform: translateY(200px);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes position {
+
+  0%,
+  19.9% {
+    margin-top: 10%;
+    margin-left: 40%;
+  }
+
+  20%,
+  39.9% {
+    margin-top: 40%;
+    margin-left: 30%;
+  }
+
+  40%,
+  59.9% {
+    margin-top: 20%;
+    margin-left: 70%;
+  }
+
+  60%,
+  79.9% {
+    margin-top: 30%;
+    margin-left: 20%;
+  }
+
+  80%,
+  99.9% {
+    margin-top: 30%;
+    margin-left: 80%;
+  }
+}
+
+@-moz-keyframes position {
+
+  0%,
+  19.9% {
+    margin-top: 10%;
+    margin-left: 40%;
+  }
+
+  20%,
+  39.9% {
+    margin-top: 40%;
+    margin-left: 30%;
+  }
+
+  40%,
+  59.9% {
+    margin-top: 20%;
+    margin-left: 70%;
+  }
+
+  60%,
+  79.9% {
+    margin-top: 30%;
+    margin-left: 20%;
+  }
+
+  80%,
+  99.9% {
+    margin-top: 30%;
+    margin-left: 80%;
+  }
+}
+
+@-o-keyframes position {
+
+  0%,
+  19.9% {
+    margin-top: 10%;
+    margin-left: 40%;
+  }
+
+  20%,
+  39.9% {
+    margin-top: 40%;
+    margin-left: 30%;
+  }
+
+  40%,
+  59.9% {
+    margin-top: 20%;
+    margin-left: 70%;
+  }
+
+  60%,
+  79.9% {
+    margin-top: 30%;
+    margin-left: 20%;
+  }
+
+  80%,
+  99.9% {
+    margin-top: 30%;
+    margin-left: 80%;
+  }
+}
+
+@-ms-keyframes position {
+
+  0%,
+  19.9% {
+    margin-top: 10%;
+    margin-left: 40%;
+  }
+
+  20%,
+  39.9% {
+    margin-top: 40%;
+    margin-left: 30%;
+  }
+
+  40%,
+  59.9% {
+    margin-top: 20%;
+    margin-left: 70%;
+  }
+
+  60%,
+  79.9% {
+    margin-top: 30%;
+    margin-left: 20%;
+  }
+
+  80%,
+  99.9% {
+    margin-top: 30%;
+    margin-left: 80%;
+  }
+}
+
+@keyframes position {
+
+  0%,
+  19.9% {
+    margin-top: 10%;
+    margin-left: 40%;
+  }
+
+  20%,
+  39.9% {
+    margin-top: 40%;
+    margin-left: 30%;
+  }
+
+  40%,
+  59.9% {
+    margin-top: 20%;
+    margin-left: 70%;
+  }
+
+  60%,
+  79.9% {
+    margin-top: 30%;
+    margin-left: 20%;
+  }
+
+  80%,
+  99.9% {
+    margin-top: 30%;
+    margin-left: 80%;
+  }
+}
+
+.saleTitle {
+  position: relative;
+  width: 100%;
+  max-width: 468px;
+  max-height: 155px;
+  margin: 0 auto;
+  transform: translate(0, 50%);
+  padding: 0 24px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+.sale {
+  width: 100%;
+
+  .content {
+
+    background: #fd322b;
+    box-shadow: 0px 0px 0px 5px #fd322b;
+    border: solid 4px #b00b06;
+    padding: 0.2em 0.5em;
+    border-radius: 8px;
+    padding-top: 50px;
+  }
+}
+
+.gTitle {
+  max-width: 180px;
+  margin: 20px auto 20px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 640px) {
+  .gTitle {
+    max-width: 300px;
+    margin: 20px auto 20px;
+
+  }
+}
+
+.giftTitle {
+  position: relative;
+  width: 100%;
+  max-width: 468px;
+  max-height: 155px;
+  margin: 0 auto;
+  padding: 0 24px;
+  margin: 40px auto 20px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+.directions {
+  color: #fff;
+  list-style-position: inside;
+  margin-bottom: 20px;
+
+  h3 {
+    color: #fff;
+    font-size: 20px;
+  }
+
+  li {
+    margin-left: 24px;
+    list-style-type: decimal;
+
+  }
+}
+
+.iphone {
+  background: url(../images/iphonebg.png)no-repeat 50% 0;
+  text-align: center;
+  margin-top: 40px;
+  padding-left: 12px;
+  padding-right: 12px;
+  background-size: cover;
+
+
+  img {
+    width: 100%;
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 640px) {
+  .iphone {
+    background-size: auto;
+
+  }
+}
